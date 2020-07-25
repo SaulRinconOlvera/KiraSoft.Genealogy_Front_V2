@@ -1,0 +1,34 @@
+{
+    "Pages": {
+        "Login": {
+            "UserName": "Nombre del usuario",
+            "Password": "Contraseña",
+            "RememberMe": "Recuerdame",
+            "ForgotPass": "¿Olvidaste tu contraseña?",
+            "Login": "Ingresar",
+            "SingUp": "Regístrate",
+            "NoAccount": "¿Aun no tienes una cuenta?",
+            "Facebook": "Ingresa con tu cuenta de Facebook",
+            "Google": "Ingresa con tu cuenta de Google"
+        },
+        "Register": {
+            "Title": "Registrese Ahora",
+            "SubTitle": "Cree su cuenta y disfrute",
+            "Name": "Nombre",
+            "FirstFamilyName": "Apellido Paterno",
+            "SecondFamilyName": "Apellido Materno",
+            "Email": "Correo electrónico",
+            "Password": "Contraseña",
+            "ConfirmPwd": "Confirmar contraseña",
+            "IAgree": "Estoy de acuerdo con los",
+            "Terms": "términos",
+            "SingUp": "Registrarse",
+            "IHaveAccount": "¿Ya tienes una cuenta?",
+            "SingIn": "Ingresa aquí",
+            "Errors": {
+                "PassError": "Las contraseñas no coinciden",
+                "Pass1": "La contraseña debe tener por lo menos 8 caracteres"
+            }
+        }
+    }
+}

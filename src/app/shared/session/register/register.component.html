@@ -1,0 +1,91 @@
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+<section id="wrapper" class="login-register login-sidebar">
+    <div class="login-box card">
+        <div class="card-body">
+
+            <div id="logo" class="text-center">
+                <a href="javascript:void(0)" class="db">
+                    <img src="./assets/images/logo-icon.png" alt="Home" /><br/>
+                    <img src="./assets/images/logo-text.png" alt="Home" />
+                </a>
+            </div>
+
+            <form ngNativeValidate [formGroup]="form" (ngSubmit)="userRegister()" class="floating-labels m-t-40" id="loginform" action="index.html">
+
+                <h3 class="box-title m-t-40 m-b-0">{{ 'Pages.Register.Title' | translate }}</h3>
+                <small>{{ 'Pages.Register.SubTitle' | translate }}</small>
+
+                <div class="form-group m-t-20">
+                    <input formControlName="name" name="name"  type="text" required class="form-control" minlength="2" aria-invalid="true" id="name">
+                    <span class="bar"></span>
+                    <label for="name">{{ 'Pages.Register.Name' | translate }}</label>
+                </div>
+
+                <div class="form-group m-t-20">
+                    <input formControlName="firstFamilyName" name="firstFamilyName" required type="text" minlength="2" aria-invalid="true"  class="form-control" id="firstFamilyName">
+                    <span class="bar"></span>
+                    <label for="FirstFamilyName">{{ 'Pages.Register.FirstFamilyName' | translate }}</label>
+                </div>
+
+                <div class="form-group m-t-20">
+                    <input formControlName="secondFamilyName" name="secondFamilyName" type="text" minlength="2" class="form-control" aria-invalid="true"  id="secondFamilyName">
+                    <span class="bar"></span>
+                    <label for="SecondFamilyName">{{ 'Pages.Register.SecondFamilyName' | translate }}</label>
+                </div>
+
+                <div class="form-group m-b-40">
+                    <input formControlName="email" name="email" class="form-control" type="email" required id="email">
+                    <span class="bar"></span>
+                    <label for="email">{{ 'Pages.Register.Email' | translate }}</label>
+                </div>
+
+                <div class="form-group m-b-40">
+                    <input formControlName="password" name="password" class="form-control" type="password" required id="password">
+                    <span class="bar"></span>
+                    <label for="password">{{ 'Pages.Register.Password' | translate }}</label>
+                    <div class="has-danger" *ngIf="form.errors?.isNotCorrect1 && !form.pristine" >
+                        <small class="form-control-feedback"> {{ 'Pages.Register.Errors.Pass1' | translate }} </small>
+                    </div>
+                </div>
+
+                <div class="form-group m-b-40">
+                    <input formControlName="confirmPassword" name="confirmPassword" class="form-control" type="password" required id="confirmPassword">
+                    <span class="bar"></span>
+                    <label for="confirmPassword">{{ 'Pages.Register.ConfirmPwd' | translate }}</label>
+                    <div class="has-danger" *ngIf="form.errors?.passDifferent && !form.pristine" >
+                        <small class="form-control-feedback"> {{ 'Pages.Register.Errors.PassError' | translate }} </small>
+                    </div>
+                    <div class="has-danger" *ngIf="form.errors?.isNotCorrect2 && !form.pristine" >
+                        <small class="form-control-feedback"> {{ 'Pages.Register.Errors.Pass1' | translate }} </small>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <div class="custom-control custom-checkbox">
+                            <input formControlName="terms" name="terms" type="checkbox" class="custom-control-input" id="terms">
+                            <label class="custom-control-label" for="terms">{{ 'Pages.Register.IAgree' | translate }}
+                                <a href="/terms">{{ 'Pages.Register.Terms' | translate }}</a></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group text-center m-t-20">
+                    <div class="col-xs-12">
+                        <button class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">{{ 'Pages.Register.SingUp' | translate }}</button>
+                    </div>
+                </div>
+                <div class="form-group m-b-0">
+                    <div class="col-sm-12 text-center">
+                        <p>{{ 'Pages.Register.IHaveAccount' | translate }}<a href="/login" class="text-info m-l-5">
+                            <b>{{ 'Pages.Register.SingIn' | translate }}</b></a></p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- ============================================================== -->
+<!-- End Wrapper -->
+<!-- ============================================================== -->

@@ -1,0 +1,73 @@
+{
+    "options" : [
+        {
+            "name" : "--- MAIN MENU",
+            "type" : 0,
+            "hasChildren" : false
+        },
+        {
+            "name" : "Dashboard",
+            "type" : 1,
+            "icon" : "icon-speedometer",
+            "hasChildren" : false,
+            "link" : "index.html"
+        },
+        {
+            "name" : "Mailbox",
+            "type" : 1,
+            "icon" : "icon-envelope-open",
+            "hasChildren" : true,
+            "children" : [
+                {
+                    "name" : "Mailbox",
+                    "type" : 1,
+                    "link" : "app-email.html",
+                    "hasChildren" : false
+                },
+                {
+                    "name" : "Mailbox Detail",
+                    "type" : 1,
+                    "link" : "app-email-detail.html",
+                    "hasChildren" : false
+                },
+                {
+                    "name" : "Compose Mail",
+                    "type" : 1,
+                    "link" : "app-compose.html",
+                    "hasChildren" : false
+                }
+            ]
+        },
+        {
+            "name" : "--- PROFESSIONAL",
+            "type" : 0,
+            "hasChildren" : false
+        },
+        {
+            "name" : "Leads",
+            "type" : 1,
+            "icon" : "icon-people",
+            "hasChildren" : true,
+            "children" : [
+                {
+                    "name" : "All Leads",
+                    "type" : 1,
+                    "link" : "app-email.html",
+                    "hasChildren" : false
+                },
+                {
+                    "name" : "Add Leads",
+                    "type" : 1,
+                    "link" : "app-email-detail.html",
+                    "hasChildren" : false
+                },
+                {
+                    "name" : "Edit Leads",
+                    "type" : 1,
+                    "link" : "app-compose.html",
+                    "hasChildren" : false
+                }
+            ]
+        }
+    ]
+}

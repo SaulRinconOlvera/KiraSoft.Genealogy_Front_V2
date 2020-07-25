@@ -1,0 +1,1 @@
+export enum optionType { Title = 0, Option = 1 }

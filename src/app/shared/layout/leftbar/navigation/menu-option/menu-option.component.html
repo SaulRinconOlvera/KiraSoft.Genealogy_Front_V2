@@ -1,0 +1,15 @@
+<li *ngIf="menuOption.type === 0" [ngClass]="'nav-small-cap'">{{menuOption.name}}</li> 
+<li *ngIf="menuOption.type === 1 && menuOption.link" > 
+    <a [ngClass]="['waves-effect','waves-dark']" href="{{ menuOption.link }}" aria-expanded="false"> 
+        <i class="{{ menuOption.icon }}"></i> 
+        <span [ngClass]="'hide-menu'">{{ menuOption.name }}</span>
+    </a>
+</li>
+<li *ngIf="menuOption.type === 1 && !menuOption.link && menuOption.hasChildren " > 
+    <a [ngClass]="['has-arrow','waves-effect','waves-dark']" href="javascript:void(0)" aria-expanded="false">
+        <i class="{{ menuOption.icon }}"></i><span [ngClass]="'hide-menu'">{{ menuOption.name }}</span>
+    </a>
+    <ul aria-expanded="false" [ngClass]="'collapse'">
+        <li *ngFor="let child of menuOption.children"  ><a href="{{ child.link }}">{{ child.name }}</a></li>
+    </ul>
+</li>

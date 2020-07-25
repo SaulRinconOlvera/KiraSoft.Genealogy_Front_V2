@@ -1,0 +1,23 @@
+@import 'src/assets/dist/scss/pages/login-register-lock.scss';
+
+#logo {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#wrapper {
+    background-image: url(/assets/images/background/back_families1.png);
+}
+
+#checkboxLabel {
+    width: 120px;
+}
+
+.btn-facebook {
+    margin-right: 10px;
+}
+
+div.custom-checkbox:hover,
+    .custom-control-label {
+    cursor: pointer;
+}
